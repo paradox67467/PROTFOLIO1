@@ -436,15 +436,18 @@ header{
 }
 
 
-.project-image{
-    height: 190px;
+.project-image {
+    height: 190px; /* This keeps the height consistent for all cards */
+    width: 100%;
     overflow: hidden;
+    background: #0f0f0f; /* Fills empty space if the image is small */
 }
 
-.project-image img{
+.project-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* This is the key: it crops the image to fill the 190px box */
+    object-position: center;
     transition: 0.6s ease;
 }
 
